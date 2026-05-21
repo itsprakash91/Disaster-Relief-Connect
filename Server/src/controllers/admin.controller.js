@@ -131,7 +131,7 @@ const getDashboardStats = async (req, res) => {
             success: true,
             stats: {
                 ...stats,
-                ...donationStats
+                // ...donationStats
             },
             recentRequests
         });
