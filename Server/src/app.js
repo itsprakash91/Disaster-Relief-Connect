@@ -53,9 +53,9 @@ export { upload };
 // routes import
 import userRouter from "./routes/user.routes.js";
 import helpRequestRouter from "./routes/helpRequest.routes.js";
-import donationRouter from "./routes/donation.routes.js";
+// import donationRouter from "./routes/donation.routes.js";
 import adminRouter from "./routes/admin.routes.js";
-import smsRouter from "./routes/sms.routes.js";
+// import smsRouter from "./routes/sms.routes.js";
 import conversationRouter from "./routes/conversation.routes.js";
 import messageRouter from "./routes/message.routes.js";
 import campRouter from "./routes/camp.routes.js";
@@ -63,11 +63,11 @@ import campRouter from "./routes/camp.routes.js";
 // routes declaration
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/help-requests", helpRequestRouter);
-app.use("/api/v1/donations", donationRouter);
+//app.use("/api/v1/donations", donationRouter);
 app.use("/api/v1/admin", adminRouter);
 app.use("/api/v1/conversations", conversationRouter);
 app.use("/api/v1/messages", messageRouter);
-app.use("/api/v1/sms", smsRouter);
+// app.use("/api/v1/sms", smsRouter);
 app.use("/api/v1/camps", campRouter);
 
 // url : http://localhost:8000/api/v1/users/register
