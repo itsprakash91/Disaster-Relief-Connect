@@ -4,9 +4,9 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  server:{
-    proxy:{
-      '/api':'http://localhost:3000',
+  server: {
+    proxy: {
+      '/api': 'https://disaster-relief-connect.onrender.com',
     },
   },
   plugins: [react(), tailwindcss()],
