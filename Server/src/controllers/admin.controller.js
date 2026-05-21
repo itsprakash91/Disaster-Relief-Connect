@@ -1,6 +1,6 @@
 import { HelpRequest } from "../models/helpRequest.model.js";
 import { User } from "../models/user.model.js";
-import { Donation } from "../models/donation.model.js";
+// import { Donation } from "../models/donation.model.js";
 
 const cookieOptions = {
     httpOnly: true,
@@ -107,18 +107,18 @@ const getDashboardStats = async (req, res) => {
         };
 
         // Get donations stats
-        const donationStats = await Donation.aggregate([
-            {
-                $match: { status: "completed" }
-            },
-            {
-                $group: {
-                    _id: null,
-                    totalAmount: { $sum: "$amount" },
-                    totalDonations: { $sum: 1 }
-                }
-            }
-        ]).then(res => res[0] || { totalAmount: 0, totalDonations: 0 });
+        // const donationStats = await Donation.aggregate([
+        //     {
+        //         $match: { status: "completed" }
+        //     },
+        //     {
+        //         $group: {
+        //             _id: null,
+        //             totalAmount: { $sum: "$amount" },
+        //             totalDonations: { $sum: 1 }
+        //         }
+        //     }
+        // ]).then(res => res[0] || { totalAmount: 0, totalDonations: 0 });
 
         // Get recent help requests
         const recentRequests = await HelpRequest.find()
