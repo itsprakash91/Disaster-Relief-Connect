@@ -1,0 +1,70 @@
+{
+  "name": "Disaster Relief Connect",
+  "short_name": "Relief Connect",
+  "description": "A disaster-resilient platform connecting flood victims with volunteers and resources",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#2563eb",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/vite.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/vite.svg",
+      "sizes": "540x720",
+      "type": "image/svg+xml",
+      "form_factor": "narrow"
+    }
+  ],
+  "categories": ["disaster", "relief", "emergency"],
+  "shortcuts": [
+    {
+      "name": "Create Help Request",
+      "short_name": "Help",
+      "description": "Submit a new help request",
+      "url": "/help-requests?utm_source=shortcut",
+      "icons": [
+        {
+          "src": "/vite.svg",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "View Nearby Requests",
+      "short_name": "Map",
+      "description": "See help requests on the map",
+      "url": "/map-dashboard?utm_source=shortcut",
+      "icons": [
+        {
+          "src": "/vite.svg",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}
